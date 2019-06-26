@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.1",
+    "parameters": {
+        "Environmet": {
+            "type": "string",
+            "defaultValue": "QA",
+            "allowedValues": [
+                "PRD",
+                "DEV",
+                "QA",
+                "STG"
+            ]
+        },
+        "Subs_RG_Envir": {
+            "type": "array",
+            "defaultValue": [
+                "ADM",
+                "APP",
+                "Common",
+                "DB",
+                "HTTP",
+                "Network",
+                "Other",
+                "SOLR"
+            ]
+        },
+        "Location": {
+            "type": "string",
+            "defaultValue": "westeurope"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2019-05-10",
+            "location": "[parameters('Location')]",
+            "name": "[concat('ICC_', parameters('Environmet'), '_RG_', parameters('Subs_RG_Envir')[copyIndex()])]",
+            "properties": {},
+            "copy": {
+                "name": "MyCopyTask",
+                "count": "[length(parameters('Subs_RG_Envir'))]",
+                "mode": "Parallel"
+            }
+         }
+    ],
+    "outputs": {}
+}
