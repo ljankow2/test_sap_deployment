@@ -17,6 +17,19 @@
         "SOLR"
       ]
     },
+    "SubEnvir":{
+            "type": "array",
+            "defaultValue": [
+                "ADM",
+                "ADM_IDX",
+                "ADM_IMP",
+                "APP",
+                "DB",
+                "MSOLR",
+                "SSOLR",
+                "WEB"
+            ]
+    },
     "Location": {
       "value": "westeurope"
     }
