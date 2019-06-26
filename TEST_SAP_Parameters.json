@@ -5,32 +5,17 @@
     "Environment": {
       "value": "QA"
     },
-    "Subs_RG_Envir": {
+    "SubEnvir": {
       "value": [
         "ADM",
+        "ADM_IDX",
+        "ADM_IMP",
         "APP",
-        "Common",
         "DB",
-        "HTTP",
-        "Network",
-        "Other",
-        "SOLR"
+        "MSOLR",
+        "SSOLR",
+        "WEB"
       ]
-    },
-    "SubEnvir":{
-         "value": [
-                "ADM",
-                "ADM_IDX",
-                "ADM_IMP",
-                "APP",
-                "DB",
-                "MSOLR",
-                "SSOLR",
-                "WEB"
-            ]
-    },
-    "Location": {
-      "value": "westeurope"
     }
   }
 }
