@@ -18,7 +18,7 @@
       ]
     },
     "SubEnvir":{
-         "Value": [
+         "value": [
                 "ADM",
                 "ADM_IDX",
                 "ADM_IMP",
