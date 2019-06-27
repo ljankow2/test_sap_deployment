@@ -3,7 +3,6 @@ $Location = "westeurope"
 $Dep_Name = "go"
 $Template_URL = "https://raw.githubusercontent.com/ljankow2/test_sap_deployment/master/Resurce_Group-01-02--Creating_in_loops.json"
 # Select-AzSubscription -SubscriptionName $Subs_Name
-Remove-Module -Name AzureRM -Force
 
 New-AzDeployment `
     -Name $Dep_Name `
